@@ -9,7 +9,7 @@ Supply voltage: 1.8 V
 
 Static gain error: < 0.05 %
 
-CMRR @ DC --> > 74 dB
+CMRR @ DC : > 74 dB
 
 Phase margin: > 70°
 
