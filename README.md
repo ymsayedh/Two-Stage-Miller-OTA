@@ -29,4 +29,4 @@ Slew rate: 5 V/us
 
 Application: Unity gain buffer.
 
-Designed using gm/ID methodology with Analog Designer's Toolbox (ADT) and simulated using Xschem with Ngspice codes.
+Designed using gm/ID methodology with Analog Designer's Toolbox (ADT) and simulated using xschem with ngspice codes.
