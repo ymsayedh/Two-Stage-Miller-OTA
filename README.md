@@ -25,7 +25,7 @@ Load: 5 pF
 
 Buffer closed loop rise time (10 % to 90 %): < 70 ns
 
-Slew rate: 𝟓 𝑽/𝝁𝒔
+Slew rate: 5 V/us
 
 Application: Unity gain buffer.
 
