@@ -1,0 +1,13 @@
+.control
+save all
+* === DIFFERENTIAL LARGE SIGNAL ===
+dc VID -1.8 1.8 10m
+* === EXTRACT EXTREME VALUES ===
+let Vmax = maximum(VOUT)
+let Vmin = minimum(VOUT)
+* === DISPLAY RESULTS ===
+echo \"Diff Large Signal Analysis Results:\"
+echo \"Max Output: $&Vmax V\"
+echo \"Min Output: $&Vmin V\"
+write out.raw
+.endc

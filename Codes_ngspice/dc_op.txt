@@ -1,0 +1,34 @@
+.control
+save all
+let x = 1
+set num = {$&x}
+dowhile x <= 8
+save @m.xm{$num}.m0[id]
+save @m.xm{$num}.m0[vgs]
+save @m.xm{$num}.m0[vds]
+save @m.xm{$num}.m0[vdsat]
+save @m.xm{$num}.m0[vth]
+save @m.xm{$num}.m0[gm]
+save @m.xm{$num}.m0[gds]
+save @m.xm{$num}.m0[gmbs]
+save @m.xm{$num}.m0[cgs]
+save @m.xm{$num}.m0[cgd]
+save @m.xm{$num}.m0[csb]
+save @m.xm{$num}.m0[cdb]
+let x = x + 1
+set num = {$&x}
+end
+op
+write dc_op.raw
+echo \" === Calculated Parameters ===\"
+let x = 1
+dowhile x <= 8
+set num = {$&x}
+let gmid = @m.xm{$num}.m0[gm]/@m.xm{$num}.m0[id]
+let Vstar = 2/gmid
+let ro = 1/@m.xm{$num}.m0[gds]
+echo \"M{$num}: gm/id = $&gmid S/A, Vstar = $&Vstar V, ro = $&ro ohms\"
+let x = x + 1
+end
+show m : id : gm : gds : gmbs : vgs : vth : vds : vdsat
+print VOUT VINN VINP VOUT1 VM

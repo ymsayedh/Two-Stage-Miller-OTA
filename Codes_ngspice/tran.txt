@@ -1,0 +1,7 @@
+.control 
+save all 
+
+tran 0.1n 5u
+write tran.raw
+.endc
+"
